@@ -1,0 +1,211 @@
+{
+    "queriedPO": {
+        "PurchaseOrder": "4500001850",
+        "CompanyCode": "2000",
+        "PurchaseOrderType": "NB",
+        "PurchasingDocumentDeletionCode": "",
+        "PurchasingProcessingStatus": "02",
+        "CreatedByUser": "BTPUSER",
+        "CreationDate": "/Date(1739318400000)/",
+        "LastChangeDateTime": "/Date(1739359981010+0000)/",
+        "Supplier": "103",
+        "PurchaseOrderSubtype": "",
+        "Language": "EN",
+        "PaymentTerms": "0004",
+        "CashDiscount1Days": "0",
+        "CashDiscount2Days": "0",
+        "NetPaymentDays": "0",
+        "CashDiscount1Percent": "0.000",
+        "CashDiscount2Percent": "0.000",
+        "PurchasingOrganization": "2000",
+        "PurchasingDocumentOrigin": "9",
+        "PurchasingGroup": "201",
+        "PurchaseOrderDate": "/Date(1739318400000)/",
+        "DocumentCurrency": "USD",
+        "ExchangeRate": "1.00000",
+        "ExchangeRateIsFixed": false,
+        "ValidityStartDate": null,
+        "ValidityEndDate": null,
+        "SupplierQuotationExternalID": "",
+        "PurchasingCollectiveNumber": "",
+        "SupplierRespSalesPersonName": "",
+        "SupplierPhoneNumber": "",
+        "SupplyingSupplier": "",
+        "SupplyingPlant": "",
+        "IncotermsClassification": "",
+        "CorrespncExternalReference": "",
+        "CorrespncInternalReference": "",
+        "InvoicingParty": "103",
+        "ReleaseIsNotCompleted": false,
+        "PurchasingCompletenessStatus": false,
+        "IncotermsVersion": "",
+        "IncotermsLocation1": "",
+        "IncotermsLocation2": "",
+        "ManualSupplierAddressID": "",
+        "IsEndOfPurposeBlocked": "",
+        "AddressCityName": "NY",
+        "AddressFaxNumber": "",
+        "AddressHouseNumber": "",
+        "AddressName": "INT08",
+        "AddressPostalCode": "10005",
+        "AddressStreetName": "Test 123",
+        "AddressPhoneNumber": "",
+        "AddressRegion": "TX",
+        "AddressCountry": "US",
+        "AddressCorrespondenceLanguage": "EN",
+        "PurgAggrgdProdCmplncSuplrSts": "",
+        "PurgAggrgdProdMarketabilitySts": "",
+        "PurgAggrgdSftyDataSheetStatus": "",
+        "PurgProdCmplncTotDngrsGoodsSts": "",
+        "to_PurchaseOrderItem": {
+            "results": [
+                {
+                    "PurchaseOrder": "4500001850",
+                    "PurchaseOrderItem": "10",
+                    "PurchasingDocumentDeletionCode": "",
+                    "PurchaseOrderItemText": "CP-RM5, Varnish",
+                    "Plant": "2000",
+                    "StorageLocation": "",
+                    "MaterialGroup": "L002",
+                    "PurchasingInfoRecord": "5300000572",
+                    "SupplierMaterialNumber": "",
+                    "OrderQuantity": "4.000",
+                    "PurchaseOrderQuantityUnit": "KG",
+                    "OrderPriceUnit": "KG",
+                    "OrderPriceUnitToOrderUnitNmrtr": "1",
+                    "OrdPriceUnitToOrderUnitDnmntr": "1",
+                    "DocumentCurrency": "USD",
+                    "NetPriceAmount": "23.00",
+                    "NetPriceQuantity": "12",
+                    "TaxCode": "",
+                    "ShippingInstruction": "",
+                    "TaxDeterminationDate": null,
+                    "TaxCountry": "",
+                    "PriceIsToBePrinted": true,
+                    "OverdelivTolrtdLmtRatioInPct": "0.0",
+                    "UnlimitedOverdeliveryIsAllowed": false,
+                    "UnderdelivTolrtdLmtRatioInPct": "0.0",
+                    "ValuationType": "",
+                    "IsCompletelyDelivered": false,
+                    "IsFinallyInvoiced": false,
+                    "PurchaseOrderItemCategory": "0",
+                    "AccountAssignmentCategory": "",
+                    "MultipleAcctAssgmtDistribution": "",
+                    "PartialInvoiceDistribution": "",
+                    "GoodsReceiptIsExpected": true,
+                    "GoodsReceiptIsNonValuated": false,
+                    "InvoiceIsExpected": true,
+                    "InvoiceIsGoodsReceiptBased": false,
+                    "PurchaseContract": "",
+                    "PurchaseContractItem": "0",
+                    "Customer": "",
+                    "Subcontractor": "",
+                    "SupplierIsSubcontractor": false,
+                    "ItemNetWeight": "0.450",
+                    "ItemWeightUnit": "KG",
+                    "TaxJurisdiction": "7700000000",
+                    "PricingDateControl": "",
+                    "ItemVolume": "0.000",
+                    "ItemVolumeUnit": "",
+                    "SupplierConfirmationControlKey": "",
+                    "IncotermsClassification": "",
+                    "IncotermsTransferLocation": "",
+                    "EvaldRcptSettlmtIsAllowed": false,
+                    "PurchaseRequisition": "",
+                    "PurchaseRequisitionItem": "0",
+                    "IsReturnsItem": false,
+                    "RequisitionerName": "",
+                    "ServicePackage": "0",
+                    "EarmarkedFunds": "",
+                    "EarmarkedFundsDocument": "",
+                    "EarmarkedFundsItem": "0",
+                    "EarmarkedFundsDocumentItem": "0",
+                    "IncotermsLocation1": "",
+                    "IncotermsLocation2": "",
+                    "Material": "RM5_CP",
+                    "InternationalArticleNumber": "",
+                    "ManufacturerMaterial": "RM5_CP",
+                    "ServicePerformer": "",
+                    "ProductType": "1",
+                    "ExpectedOverallLimitAmount": "0.00",
+                    "OverallLimitAmount": "0.00",
+                    "PurContractForOverallLimit": "",
+                    "PurchasingParentItem": "0",
+                    "ReferenceDeliveryAddressID": "",
+                    "DeliveryAddressID": "",
+                    "DeliveryAddressName": "Plant 2000 - Address Name 1",
+                    "DeliveryAddressName2": "",
+                    "DeliveryAddressFullName": "Plant 2000 - Address Name 1",
+                    "DeliveryAddressStreetName": "Deer Creek",
+                    "DeliveryAddressHouseNumber": "3475",
+                    "DeliveryAddressCityName": "Palo Alto",
+                    "DeliveryAddressPostalCode": "94304-1355",
+                    "DeliveryAddressRegion": "CA",
+                    "DeliveryAddressCountry": "US",
+                    "DeliveryAddressDistrictName": "SANTA CLARA",
+                    "DownPaymentType": "",
+                    "DownPaymentPercentageOfTotAmt": "0.00",
+                    "DownPaymentAmount": "32.00",
+                    "DownPaymentDueDate": "/Date(1739318400000)/",
+                    "BR_MaterialUsage": "",
+                    "BR_MaterialOrigin": "",
+                    "BR_CFOPCategory": "",
+                    "BR_IsProducedInHouse": false,
+                    "ConsumptionTaxCtrlCode": "",
+                    "PurgProdCmplncSupplierStatus": "",
+                    "PurgProductMarketabilityStatus": "",
+                    "PurgSafetyDataSheetStatus": "",
+                    "PurgProdCmplncDngrsGoodsStatus": "",
+                    "StockSegment": "",
+                    "RequirementSegment": "",
+                    "to_PurchaseOrder": {
+                        "__deferred": {
+                            "uri": "to_PurchaseOrder"
+                        }
+                    },
+                    "to_AccountAssignment": {
+                        "__deferred": {
+                            "uri": "to_AccountAssignment"
+                        }
+                    },
+                    "to_PurchaseOrderItemNote": {
+                        "__deferred": {
+                            "uri": "to_PurchaseOrderItemNote"
+                        }
+                    },
+                    "to_PurchaseOrderPricingElement": {
+                        "__deferred": {
+                            "uri": "to_PurchaseOrderPricingElement"
+                        }
+                    },
+                    "to_ScheduleLine": {
+                        "__deferred": {
+                            "uri": "to_ScheduleLine"
+                        }
+                    }
+                }
+            ]
+        },
+        "to_PurchaseOrderNote": {
+            "__deferred": {
+                "uri": "to_PurchaseOrderNote"
+            }
+        },
+        "to_Partners": {
+        "results": [
+          {
+            "PartnerFunction": "SP",
+            "PartnerID": "Supplier001",
+            "PartnerName": "Supplier Name 1"
+          },
+          {
+            "PartnerFunction": "WE",
+            "PartnerID": "Supplier002",
+            "PartnerName": "Supplier Name 2"
+          }
+        ]
+      }
+    }
+}
+
+  

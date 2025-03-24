@@ -1,0 +1,43 @@
+/* Enter your custom styles here */
+
+
+.iconTabFilter .sapMITBIcon {
+    font-size: 1.5rem !important;  /* Adjust icon size here */
+}
+
+/* Ensure label takes full width and is properly centered */
+.iconTabFilter .sapMITBText {
+    width: 100% !important; /* Make label take full width */
+    text-align: center; /* Center label text */
+}
+
+ .sapFCardHeaderTextFirstLine {
+    justify-content: center !important;
+}
+
+.buttonCenter{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+
+
+/*Heading Border (under)*/
+.sapMListHdrText {
+    border-bottom: 0px solid var(--sapGroup_TitleBorderColor) !important;
+}
+
+/*StandardListItem Border Line Color changed to white*/
+:root {
+    --sapList_BorderColor: #fff !important;
+}
+/*Size of Point*/
+.sapUiSizeCompact .sapMSLIImgIcon {
+    height: 2rem !important;
+    line-height: 2rem !important;
+    font-size: 0.35rem !important;
+}
+/*Point Color - Black*/
+.sapMSLIImgIcon, .sapMSLIImgNoInsetIcon { 
+    color: #000000 !important;
+}

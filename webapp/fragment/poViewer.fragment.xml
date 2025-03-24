@@ -1,0 +1,197 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield" xmlns:form="sap.ui.layout.form">
+    <Dialog id="dialogId" title="Purchase Order {productModel>/queriedPO/PurchaseOrder}" draggable="true" resizable="true" >
+        <content>
+                <form:Form id="purchaseOrderForm">
+                <form:layout>
+                    <form:ResponsiveGridLayout 
+                        labelSpanXL="9" labelSpanL="9" labelSpanM="9" 
+                        emptySpanXL="0" emptySpanL="0" emptySpanM="0" 
+                        columnsXL="3" columnsL="3" columnsM="3"  singleContainerFullSize="false"
+                     />
+                </form:layout>
+                    <form:formContainers>
+                        <!-- Purchase Order General Information -->
+                        <form:FormContainer title="Header Details">
+                            <form:formElements>
+                                <form:FormElement label="Purchase Order">
+                                    <form:fields>
+                                        <Text text="{productModel>/queriedPO/PurchaseOrder}"  />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Purchase Order Type">
+                                    <form:fields>
+                                        <Text text="{productModel>/queriedPO/PurchaseOrderType}"  />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Payment Terms">
+                                    <form:fields>
+                                        <Text text="{productModel>/queriedPO/PaymentTerms}" />
+                                    </form:fields>
+                                </form:FormElement>
+                            </form:formElements>
+                            <!-- <form:layoutData>
+                                <form:GridContainerData halfGriSd="true" />
+                            </form:layoutData> -->
+                        </form:FormContainer>
+                    </form:formContainers>
+
+                    <form:formContainers>
+                        <form:FormContainer title=" ">
+                            <form:formElements>
+                                <form:FormElement label="Company Code">
+                                    <form:fields>
+                                        <Text text="{productModel>/queriedPO/CompanyCode}" />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Purchasing Organization">
+                                    <form:fields>
+                                        <Text text="{productModel>/queriedPO/PurchasingOrganization}"  />
+                                    </form:fields>
+                                </form:FormElement>
+                                
+                                <form:FormElement label="Supplier">
+                                    <form:fields>
+                                        <Text text="{productModel>/queriedPO/Supplier}" />
+                                    </form:fields>
+                                </form:FormElement>
+                            </form:formElements>
+                            <!-- <form:layoutData>
+                                <form:GridContainerData halfGriSd="true" />
+                            </form:layoutData> -->
+                        </form:FormContainer>
+                    </form:formContainers>
+                </form:Form>
+
+                <!-- IconTabBar for Navigation Data -->
+                <IconTabBar enableTabReordering="true">
+                    <items>
+                        <!-- Items Table -->
+                        <IconTabFilter text="Purchase Order Items" icon="sap-icon://cart" >
+                            <Table id="po1ItemsTable" items="{productModel>/queriedPO/to_PurchaseOrderItem/results}">
+                                <columns>
+                                    <Column>
+                                        <Text text="Material" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Plant" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Quantity" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Net Price Amount" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Down Payment Amount" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="Net Price Quantity" />
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{productModel>PurchaseOrderItem}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>Plant}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>OrderQuantity}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>NetPriceAmount}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>DownPaymentAmount}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>NetPriceQuantity}" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </IconTabFilter>
+                        <IconTabFilter text="Partners" icon="sap-icon://customer-and-contacts" >
+                            <Table id="po2ItemsTable" items="{productModel>/queriedPO/to_Partners/results}">
+                                <columns>
+                                    <Column>
+                                        <Text text="PartnerID" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="PartnerName" />
+                                    </Column>
+                                    <Column>
+                                        <Text text="PartnerFunction" />
+                                    </Column>
+                             
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{productModel>PartnerID}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>PartnerName}" />
+                                        </cells>
+                                        <cells>
+                                            <Text text="{productModel>PartnerFunction}" />
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </IconTabFilter>
+                        <IconTabFilter text="Tab 3" icon="sap-icon://information">
+                            <Table id="po3ItemsTable" items="">
+                                <columns>
+                                    <Column>
+                                        <Text text="ColumnName" />
+                                    </Column>
+                             
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="Content" />
+                    
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </IconTabFilter>
+                        <IconTabFilter text="Tab 4" icon="sap-icon://information">
+                            <Table id="po4ItemsTable" items="">
+                                <columns>
+                                    <Column>
+                                        <Text text="ColumnName" />
+                                    </Column>
+                             
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="Content" />
+                    
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </IconTabFilter>
+                    </items>
+                </IconTabBar>
+        </content>
+        <!-- <VBox >
+            <FlexBox justifyContent="End">
+                <Button id="idCloseFragmentButton" text="Close" press="onPressCloseFragment" />
+            </FlexBox>
+        </VBox>    -->
+        <endButton>
+             <Button id="idCloseFragmentButton" text="Close" press="onPressCloseFragment" />
+        </endButton>
+    
+    </Dialog>
+</core:FragmentDefinition>

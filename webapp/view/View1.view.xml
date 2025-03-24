@@ -1,0 +1,345 @@
+<mvc:View controllerName="app.northwindobjectpage.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form"
+    xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield">
+    <Page id="page" title="{i18n>title}">
+		<Button id="idOpenFragmentButton" text="openFragment" press="onPressOpenFragment" />
+
+		<List id="idTSFList" headerText="Talent Search Field" items="{path: 'TSFModel>/Profile'}">
+			<items>
+				<StandardListItem title="{TSFModel>name}" icon="sap-icon://circle-task-2">
+					
+				</StandardListItem>
+			</items>
+		</List>
+
+		<f:Card width="500px" >
+			<f:header>
+				<card:Header title="Confirm Your Data"  />
+			</f:header>
+			<f:content>
+				<!-- <VBox height="110px" justifyContent="SpaceBetween">
+					<HBox justifyContent="SpaceBetween">
+						<Label text="Purchase Order Type"></Label>
+						<Input value="" width="100px"></Input>
+					</HBox>
+				</VBox> -->
+				
+				<VBox>
+				<form:Form id="idpurchaseOrderFormCard">
+                    <form:layout>
+                        <form:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" columnsL="2" columnsM="1"/>
+                    </form:layout>
+                    <form:formContainers>
+                        <!-- Purchase Order General Information -->
+                        <form:FormContainer title="Purchase Order Info">
+                            <form:formElements>
+
+                                <form:FormElement label="Purchase Order">
+                                    <form:fields>
+                                        <Input value="" />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Payment Terms">
+                                    <form:fields>
+                                        <Input value="" />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Company Code">
+                                    <form:fields>
+                                        <Input value="" />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Purchasing Organization">
+                                    <form:fields>
+                                        <Input value="" />
+                                    </form:fields>
+                                </form:FormElement>
+
+                                <form:FormElement label="Supplier">
+                                    <form:fields>
+                                        <Input value="" />
+                                    </form:fields>
+                                </form:FormElement>
+
+                            </form:formElements>
+                        </form:FormContainer>
+                    </form:formContainers>
+                </form:Form>
+
+                <!-- Table for Line Items -->
+                <Table id="lineItemsTable" items="">
+                    <columns>
+                        <Column>
+                            <Text text="Material" />
+                        </Column>
+                        <Column>
+                            <Text text="Plant" />
+                        </Column>
+                        <Column>
+                            <Text text="Quantity" />
+                        </Column>
+                        <Column>
+                            <Text text="Net Price Amount" />
+                        </Column>
+                        <Column>
+                            <Text text="Down Payment Amount" />
+                        </Column>
+                        <Column>
+                            <Text text="Net Price Quantity" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Input value="Material" />
+                            </cells>
+                            <cells>
+                                <Text text="Plant" />
+                            </cells>
+                            <cells>
+                                <Text text="Quantity" />
+                            </cells>
+                            <cells>
+                                <Text text="Net Price Amount" />
+                            </cells>
+                            <cells>
+                                <Text text="Down Paymeny Amount" />
+                            </cells>
+                            <cells>
+                                <Text text="Net Price Quantity" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+
+				<VBox class="buttonCenter" >
+				
+				<Button text="Submit" class="buttonCenter" />
+				</VBox>
+            	</VBox>
+
+			</f:content>
+		</f:Card>
+
+
+
+
+
+
+
+        <smartForm:SmartForm id="smartFormColumn" title="Order {OrderID}" >
+			<smartForm:layout>
+				<smartForm:ColumnLayout id="idColumnLayout" columnsM="2" columnsL="3" columnsXL="4"/>
+			</smartForm:layout>
+			<smartForm:Group id="idOrderDetailsGroup" title="Order Details">
+				<smartForm:GroupElement title="A">
+					<smartField:SmartField textLabel="CustomerID" value="{CustomerID}" importance="Medium"/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="EmployeeID" value="{EmployeeID}" importance="High"/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipVia" value="{ShipVia}"  visible="{path: 'test>/visible'}"/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="Freight" value="{Freight}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipName" value="{ShipName}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipAddress" value="{ShipAddress}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipCity" value="{ShipCity}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipRegion" value="{ShipRegion}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipPostalCode" value="{ShipPostalCode}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShipCountry" value="{ShipCountry}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+			<smartForm:Group id="idImportantDatesGroup" title="Important Dates">
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="OrderDate" value="{OrderDate}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="RequiredDate" value="{RequiredDate}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField textLabel="ShippedDate" value="{ShippedDate}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+		</smartForm:SmartForm>
+		<IconTabBar
+			id="idIconTabBar"
+			select="onTabSelect" 
+            expandable="true"
+            expanded="true"
+            enableTabReordering="true">
+			<items>
+				<IconTabFilter text="Customer" key="CustomerAssociation">
+					<smartForm:SmartForm  title="CustomerID {CustomerID}" >
+						<smartForm:layout>
+							<smartForm:ColumnLayout  columnsM="2" columnsL="3" columnsXL="4"/>
+						</smartForm:layout>
+						<smartForm:Group  title="">
+							<!-- <smartForm:GroupElement title="IGNORE">
+								<smartField:SmartField textLabel="CustomerID" value="{CustomerID}" importance="Medium"/>
+							</smartForm:GroupElement> -->
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="CompanyName" value="{CompanyName}" importance="High"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="ContactTitle" value="{ContactTitle}"  visible="{path: 'test>/visible'}"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Address" value="{Address}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="City" value="{City}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Region" value="{Region}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="PostalCode" value="{PostalCode}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Country" value="{Country}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Phone" value="{Phone}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Fax" value="{Fax}" />
+							</smartForm:GroupElement>
+						</smartForm:Group>			
+					</smartForm:SmartForm>
+				</IconTabFilter>
+				<IconTabFilter text="Employee" key="EmployeeAssociation">
+					<smartForm:SmartForm  title="EmployeeID {EmployeeID}" >
+						<smartForm:layout>
+							<smartForm:ColumnLayout  columnsM="2" columnsL="3" columnsXL="4"/>
+						</smartForm:layout>
+						<smartForm:Group  title="">
+							<!-- <smartForm:GroupElement title="IGNORE">
+								<smartField:SmartField textLabel="EmployeeID" value="{EmployeeID}" importance="Medium"/>
+							</smartForm:GroupElement> -->
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="FirstName" value="{FirstName}" importance="High"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="LastName" value="{LastName}"  visible="{path: 'test>/visible'}"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Title" value="{Title}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="TitleOfCourtesy" value="{TitleOfCourtesy}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Region" value="{Region}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="BirthDate" value="{BirthDate}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="HireDate" value="{HireDate}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Address" value="{Address}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="City" value="{City}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Region" value="{Region}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="PostalCode" value="{PostalCode}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Country" value="{Country}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="HomePhone" value="{HomePhone}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Extension" value="{Extension}" />
+							</smartForm:GroupElement>
+							<!-- <smartForm:GroupElement>
+								<smartField:SmartField textLabel="Photo" value="{Photo}" >
+								</smartField:SmartField>
+							</smartForm:GroupElement> -->
+						</smartForm:Group>		
+					</smartForm:SmartForm>
+				</IconTabFilter>
+				<IconTabFilter text="Order_Details" key="Order_DetailsAssociation">
+					<Table id="idIconTabBarOrderDetailsTable" >
+						<columns>
+							<Column>
+								<Text text="OrderID" />
+							</Column>
+							<Column>
+								<Text text="ProductID" />
+							</Column>
+							<Column>
+								<Text text="UnitPrice" />
+							</Column>
+							<Column>
+								<Text text="Quantity" />
+							</Column>
+							<Column>
+								<Text text="Discount" />
+							</Column>
+						</columns>
+
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{OrderID}" />
+									<Text text="{ProductID}" />
+									<Text text="{UnitPrice}" />
+									<Text text="{Quantity}" />
+									<Text text="{Discount}" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</IconTabFilter>
+				<IconTabFilter text="Shipper" key="ShipperAssociation">
+					<smartForm:SmartForm  title="Shipper {ShipperID}" >
+						<smartForm:layout>
+							<smartForm:ColumnLayout  columnsM="2" columnsL="3" columnsXL="4"/>
+						</smartForm:layout>
+						<smartForm:Group  title="">
+							<!-- <smartForm:GroupElement title="IGNORE">
+								<smartField:SmartField textLabel="ShipperID" value="{ShipperID}" importance="Medium"/>
+							</smartForm:GroupElement> -->
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="CompanyName" value="{CompanyName}" importance="High"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<smartField:SmartField textLabel="Phone" value="{Phone}"  visible="{path: 'test>/visible'}"/>
+							</smartForm:GroupElement>
+						</smartForm:Group>			
+					</smartForm:SmartForm>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+    </Page>
+</mvc:View>

@@ -1,0 +1,61 @@
+{
+    "Profile": [
+      {
+        "id": "P1",
+        "name": "Manager",
+        "Permissions": [
+          {
+            "id": "PERM1",
+            "name": "Access Performance Appraisals",
+            "Description": [
+              {
+                "id": "DESC1",
+                "text": "Allows the user to view and evaluate performance appraisals for direct reports.",
+                "role": "Manager"
+              }
+            ]
+          },
+          {
+            "id": "PERM2",
+            "name": "Manage Salary Adjustments",
+            "Description": [
+              {
+                "id": "DESC2",
+                "text": "Grants the user the ability to approve or make adjustments to employee salaries.",
+                "role": "Manager"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "P2",
+        "name": "HR Specialist",
+        "Permissions": [
+          {
+            "id": "PERM3",
+            "name": "View Compensation Reports",
+            "Description": [
+              {
+                "id": "DESC3",
+                "text": "Allows the user to generate and view reports on employee compensation and bonuses.",
+                "role": "HR"
+              }
+            ]
+          },
+          {
+            "id": "PERM4",
+            "name": "Manage Employee Benefits",
+            "Description": [
+              {
+                "id": "DESC4",
+                "text": "Provides the user with the ability to manage employee benefits, including health plans and pensions.",
+                "role": "HR"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
