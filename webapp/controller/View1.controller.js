@@ -13,6 +13,7 @@ sap.ui.define([
             // var oList = this.getView().byId("idTSFList");
             // oList.setModel(oTSFModel, "TSFModel");        
 
+            
             var oJSONModel = new JSONModel("../model/data.json");
             this.getView().setModel(oJSONModel,"productModel");
             console.log("JSONModel"+oJSONModel);
